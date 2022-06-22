@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offset</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/javascript/index.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div id="nav__offset-header-container">
+            <h1 id="nav__offset-header">OFFSET</h1>
+        </div>
+        <div id="nav__menu-container">
+            <ul id="nav__menu">
+                <li class="nav__menu-items">Home</li>
+                <li class="nav__menu-items">Men</li>
+                <li class="nav__menu-items">Women</li>
+                <li class="nav__menu-items">New</li>
+            </ul>
+        </div>
+        <div id="nav__options-container">
+            <ul id="nav__options">
+                <li class="nav__options-items">
+                    <img id="nav__options__acount" class="nav__options-items__img" src="/icons/account.svg" alt="" />
+                </li>
+                <li class="nav__options-items">
+                    <img class="nav__options-items__img" src="/icons/menu.svg" alt="" />
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="sign-up-container">
+        <div id="sign-up">
+            <img id="sign-up__close-button" src="/icons/close.svg" alt="">
+            <div id="sign-up__header-container">
+                <h1 id="sign-up__header">Sign Up</h1>
+            </div>
+            <div id="sign-up__content-container">
+                <div id="sign-up__input-email-container" class="sign-up__input-containers">
+                    <label for="sign-up__input-email">E-mail</label>
+                    <input id="sign-up__input-email" type="text" placeholder="auxiliumomg@gmail.com"/>
+                </div>
+                <div id="sign-up__input-username-container" class="sign-up__input-containers">
+                    <label for="sign-up__input-username">Username</label>
+                    <input id="sign-up__input-username" type="text" />
+                </div>
+                <div id="sign-up__input-password-container" class="sign-up__input-containers">
+                    <label for="sign-up__input-password">Password</label>
+                    <input id="sign-up__input-password" type="password" />
+                </div>
+                <div id="sign-up__input-repassword-container" class="sign-up__input-containers">
+                    <label for="sign-up__input-repassword">Re-Enter Password</label>
+                    <input id="sign-up__input-repassword" type="password" />
+                </div>
+                <p id="sign-up__sign-in-direct">Already have an account?</p>
+            </div>
+            <button id="sign-up__sign-up-button">sign-up</button>
+        </div>
+    </div>
+    <main>
+        <div id="main__billboard-container">
+            <div id="billboard-carousel">
+                <div class="billboard-items">item number 1</div>
+                <div class="billboard-items">item number 2</div>
+                <div class="billboard-items">item number 3</div>
+            </div>
+            <img src="/icons/leftarrow.svg" alt="left arrow" class="billboard-arrows left"></img>
+            <img src="/icons/rightarrow.svg" alt="right arrow" class="billboard-arrows right"></img>
+            <ul id="billboard-navigation">
+                <li class="billboard-navigation__items selected"></li>
+                <li class="billboard-navigation__items"></li>
+                <li class="billboard-navigation__items"></li>
+            </ul>
+        </div>
+        <div id="main__featured-container">
+            <div id="featured__img-container">
+                <img src="/img/zian.jpg" alt="featured">
+            </div>
+            <div id="featured__content-container">
+                <div id="featured__content-header">
+                    <h1>FEATURED!</h1>
+                </div>
+                <div id="featured__content-title">
+                    <h1>ZIAN ESPOLONG</h1>
+                </div>
+                <div id="featured__content-desc">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat nihil beatae veritatis incidunt vel minus dignissimos eveniet expedita ad. Itaque vel ipsa beatae, sint illum odio hic. Cum, sint pariatur?</p>
+                </div>
+                <button id="featured__content-button">Go to Featured</button>
+                <div>Sale up until July 19*</div>
+            </div>
+        </div>
+        <div id="main__store-container">
+            <div id="store__left-container"></div>
+            <div id="store__right-container">
+                <div id="right-container__header">
+                    <h1>HOT RIGHT NOW!</h1>
+                </div>
+                <div id="right-container__content">
+                    <div class="right-container__content-items" id="content__item1">
+                        <div class="store-content__initial-wrapper" id="content__initial1">
+                            <img class="initial-wrapper__img" src="/img/zian1.jpg" alt="">
+                        </div>
+                        <div class="store-content__img-wrapper">
+                            <img src="/img/zian2.jpg" alt="">
+                        </div>
+                        <div class="store-content__desc-wrapper">
+                            <h1>Jassy Works</h1>
+                        </div>
+                    </div>
+                    <div class="right-container__content-items" id="content__item2">
+                        <div class="store-content__initial-wrapper" id="content__initial2">
+                            <img class="initial-wrapper__img" src="/img/cess1.jpg" alt="">
+                        </div>
+                        <div class="store-content__img-wrapper">
+                            <img src="/img/cess.jpg" alt="">
+                        </div>
+                        <div class="store-content__desc-wrapper">
+                            <h1>Emp Works</h1>
+                        </div>
+                    </div>
+                    <div class="right-container__content-items" id="content__item3">
+                        <div class="store-content__initial-wrapper" id="content__initial3">
+                            <img class="initial-wrapper__img" src="/img/kaito.jpg" alt="">
+                        </div>
+                        <div class="store-content__img-wrapper">
+                            <img src="/img/kaito1.jpg" alt="">
+                        </div>
+                        <div class="store-content__desc-wrapper">
+                            <h1>Kuma Works</h1>
+                        </div>
+                    </div>
+                    <div class="right-container__content-items" id="content__item4">
+                        <div class="store-content__initial-wrapper" id="content__initial4">
+                            <img class="initial-wrapper__img" src="/img/geezel.jpg" alt="">
+                        </div>
+                        <div class="store-content__img-wrapper">
+                            <img src="/img/geezel1.jpg" alt="">
+                        </div>
+                        <div class="store-content__desc-wrapper">
+                            <h1>Tsunami Works</h1>
+                        </div>
+                    </div>
+                    <div class="right-container__content-items" id="content__item5">
+                        <div class="store-content__img-wrapper"></div>
+                        <div class="store-content__desc-wrapper"></div>
+                    </div>
+                    <div class="right-container__content-items" id="content__item6">
+                        <div class="store-content__img-wrapper"></div>
+                        <div class="store-content__desc-wrapper"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+
+</html>
