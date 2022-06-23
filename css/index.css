@@ -220,6 +220,10 @@ main {
     justify-content: center;
     align-items: center;
 }
+.billboard-items > img {
+    width: 1211px;
+    height: 397px;
+}
 
 /* == ARROWS == */
 .billboard-arrows{
@@ -246,6 +250,8 @@ main {
     display:flex;
     margin: 0;
     padding: 0;
+    opacity: 0;
+    transition: 250ms ease;
 }
 
 .billboard-navigation__items{

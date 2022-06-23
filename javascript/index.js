@@ -26,19 +26,40 @@ $(document).ready(function(){
     // ====== MAIN BILLBOARD ======
 
     const billboardCarousel = document.querySelector("#billboard-carousel");
+    const indicatorParents = document.querySelector("#billboard-navigation");
     var billboardIndex = 0;
 
     $("#main__billboard-container").hover(function(){
         $(".billboard-arrows").toggle(250);
     });
 
+    $("#main__billboard-container").mouseenter(function(){
+        $("#billboard-navigation").css("opacity", "1");
+    });
+    $("#main__billboard-container").mouseleave(function(){
+        $("#billboard-navigation").css("opacity", "0");
+    });
+    
+    document.querySelectorAll(".billboard-navigation__items").forEach(function(indicator, ind){
+        $(indicator).click(function(){
+            billboardIndex = ind;
+            document.querySelector(".billboard-navigation__items.selected").classList.remove("selected");
+            indicator.classList.add("selected");
+            billboardCarousel.style.transform = 'translate(' + billboardIndex * (100 / -3) + '%)';     
+        });
+    });
+
     $(".billboard-arrows.left").click(function(){
         billboardIndex = (billboardIndex > 0) ? billboardIndex - 1 : 0;
+        document.querySelector(".billboard-navigation__items.selected").classList.remove("selected");
+        indicatorParents.children[billboardIndex].classList.add("selected");
         billboardCarousel.style.transform = 'translate(' + billboardIndex * (100 / -3) + '%)';
     });
 
     $(".billboard-arrows.right").click(function(){
         billboardIndex = (billboardIndex < 2) ? billboardIndex + 1 : 2;
+        document.querySelector(".billboard-navigation__items.selected").classList.remove("selected");
+        indicatorParents.children[billboardIndex].classList.add("selected");
         billboardCarousel.style.transform = 'translate(' + billboardIndex * (100 / -3) + '%)';
     });
 
