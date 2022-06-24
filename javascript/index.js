@@ -66,19 +66,19 @@ $(document).ready(function(){
     // ====== MAIN STORE ======
 
     $("#content__item1").hover(function(){
-        $("#content__initial1").fadeToggle(300);
+        $("#content__initial1").fadeToggle(100);
     });
 
     $("#content__item2").hover(function(){
-        $("#content__initial2").fadeToggle(300);
+        $("#content__initial2").fadeToggle(100);
     });
     
     $("#content__item3").hover(function(){
-        $("#content__initial3").fadeToggle(300);
+        $("#content__initial3").fadeToggle(100);
     });
 
     $("#content__item4").hover(function(){
-        $("#content__initial4").fadeToggle(300);
+        $(this).fadeToggle(100);
     });
 
 }); 

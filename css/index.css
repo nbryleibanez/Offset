@@ -204,12 +204,12 @@ main {
     margin: auto;
     position: relative;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 10px;
     background-color: white ;
 }
 
 #billboard-carousel{
-    height:100%;
+    height: 100%;
     width: 300%;
     display: flex;
     transition: all 300ms;
@@ -221,8 +221,8 @@ main {
     align-items: center;
 }
 .billboard-items > img {
-    width: 1211px;
-    height: 397px;
+    height: 100%;
+    width: 100%;
 }
 
 /* == ARROWS == */
@@ -374,6 +374,7 @@ main {
     justify-content: space-evenly;
     align-content:space-around;
     padding: 10px;
+    background-color: white;
 }
 .right-container__content-items{
     border: 2px solid black;
@@ -421,41 +422,7 @@ main {
     margin: 0;
 }
 
-/* =============== ITEMS PIC ADJUSTMENTS =============== */
 
-/* ===== 1 ===== */
-#content__initial1 > img {
-    object-position: 50% 0;
-}
-#content__item1 > .store-content__img-wrapper > img {
-    object-position: 50% 0;
-}
-
-/* ===== 2 ===== */
-#content__initial2 > img {
-    object-position: 75% 0;
-}
-#content__item2 > .store-content__img-wrapper > img {
-    object-position: 70% 0;
-}
-
-/* ===== 3 ===== */
-#content__initial3 > img {
-    object-position: 50% 0;
-    transform: scale(1.5, 1.5);
-}
-#content__item3 > .store-content__img-wrapper > img {
-    object-position: 50% 70%;
-}
-
-/* ===== 4 ===== */
-#content__initial4 > img {
-    object-position: 35% 50%;
-    transform: scale(2, 2);
-}
-#content__item4 > .store-content__img-wrapper > img {
-    object-position: 35% 20%;
-}
 /* ===== FOOTER ===== */
 
 footer {
