@@ -65,20 +65,89 @@ $(document).ready(function(){
 
     // ====== MAIN STORE ======
 
-    $("#content__item1").hover(function(){
-        $("#content__initial1").fadeToggle(100);
+    // == LEFT STORE ==
+
+    const storeLeftCarousel = document.querySelector("#store__left-carousel");
+    const storeLeftIndicatorParents = document.querySelector("#store__left-navigation");
+    var storeLeftIndex = 0;
+
+    $("#store__left-container").hover(function(){
+        $(".store__left-arrows").toggle(250);
     });
 
-    $("#content__item2").hover(function(){
-        $("#content__initial2").fadeToggle(100);
+    $("#store__left-container").mouseenter(function(){
+        $("#store__left-navigation").css("opacity", "1");
+    });
+    $("#store__left-container").mouseleave(function(){
+        $("#store__left-navigation").css("opacity", "0");
     });
     
-    $("#content__item3").hover(function(){
-        $("#content__initial3").fadeToggle(100);
+    document.querySelectorAll(".store__left-navigation__items").forEach(function(indicator, ind){
+        $(indicator).click(function(){
+            storeLeftIndex = ind;
+            document.querySelector(".store__left-navigation__items.selected").classList.remove("selected");
+            indicator.classList.add("selected");
+            storeLeftCarousel.style.transform = 'translate(' + storeLeftIndex * (100 / -3) + '%)';     
+        });
     });
 
-    $("#content__item4").hover(function(){
-        $(this).fadeToggle(100);
+    $(".store__left-arrows.left").click(function(){
+        storeLeftIndex = (storeLeftIndex > 0) ? storeLeftIndex - 1 : 2;
+        document.querySelector(".store__left-navigation__items.selected").classList.remove("selected");
+        storeLeftIndicatorParents.children[storeLeftIndex].classList.add("selected");
+        storeLeftCarousel.style.transform = 'translate(' + storeLeftIndex * (100 / -3) + '%)';
     });
+
+    $(".store__left-arrows.right").click(function(){
+        storeLeftIndex = (storeLeftIndex < 2) ? storeLeftIndex + 1 : 0;
+        document.querySelector(".store__left-navigation__items.selected").classList.remove("selected");
+        storeLeftIndicatorParents.children[storeLeftIndex].classList.add("selected");
+        storeLeftCarousel.style.transform = 'translate(' + storeLeftIndex * (100 / -3) + '%)';
+    });
+
+    // == RIGHT STORE ==
+
+    $("#content__item1").mouseenter(function(){
+        $("#content__initial1").fadeOut(150);
+    });
+    $("#content__item1").mouseleave(function(){
+        $("#content__initial1").fadeIn(150);
+    });
+
+    $("#content__item2").mouseenter(function(){
+        $("#content__initial2").fadeOut(150);
+    });
+    $("#content__item2").mouseleave(function(){
+        $("#content__initial2").fadeIn(150);
+    });
+
+    $("#content__item3").mouseenter(function(){
+        $("#content__initial3").fadeOut(150);
+    });
+    $("#content__item3").mouseleave(function(){
+        $("#content__initial3").fadeIn(150);
+    });
+
+    $("#content__item4").mouseenter(function(){
+        $("#content__initial4").fadeOut(150);
+    });
+    $("#content__item4").mouseleave(function(){
+        $("#content__initial4").fadeIn(150);
+    });
+
+    $("#content__item5").mouseenter(function(){
+        $("#content__initial5").fadeOut(150);
+    });
+    $("#content__item5").mouseleave(function(){
+        $("#content__initial5").fadeIn(150);
+    });
+
+    $("#content__item6").mouseenter(function(){
+        $("#content__initial6").fadeOut(150);
+    });
+    $("#content__item6").mouseleave(function(){
+        $("#content__initial6").fadeIn(150);
+    });
+
 
 }); 
